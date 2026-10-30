@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174c3f">
+  <meta name="description" content="Интерактивное решение задачи о закупке: четыре подхода из учебников, пошаговые расчёты и ссылки на страницы книг.">
+  <title>Оптимальная закупка · разбор по шагам</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23174c3f'/%3E%3Cpath d='M15 43V32h8v11zm13 0V19h8v24zm13 0V27h8v16z' fill='%23d2e78f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="math.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="topbar">
+    <a class="brand" href="#stage=1" aria-label="Оптимальная закупка, начало">
+      <svg width="31" height="31" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M8 23V16h4v7zm6 0V9h4v14zm6 0V13h4v10z" fill="#d2e78f"/></svg>
+      <span>Оптимальная закупка<small>разбор по шагам</small></span>
+    </a>
+    <div class="header-actions"><button id="menuToggle" class="quiet mobile-menu" aria-expanded="false" aria-controls="sidebar">Этапы</button><button id="present" class="quiet">На весь экран <span aria-hidden="true">⛶</span></button></div>
+  </header>
+  <div class="app-layout">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-title">ПУТЬ К РЕШЕНИЮ <span id="chapterCount">10 этапов</span></div>
+      <nav id="stageNav" aria-label="Этапы решения"></nav>
+      <div class="sidebar-bottom"><span class="little-dot"></span> Четыре подхода из учебников.<p>Основное решение и анализ доверия к вероятностям.</p></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="stage-meta"><span id="sectionLabel"></span><span id="stageCounter"></span></div>
+      <div class="overall-track"><div id="overallProgress"></div></div>
+      <div class="stage-heading"><h1 id="stageTitle"></h1><p id="stageIntro"></p></div>
+      <div class="step-toolbar"><div id="stepDots" aria-label="Шаги текущего этапа"></div><button id="revealAll" class="text-button">Показать весь этап</button></div>
+      <section id="stageContent" aria-label="Расчёт текущего этапа"></section>
+      <div class="bottom-nav"><button id="prev" class="button secondary"><span aria-hidden="true">←</span> Назад</button><div class="step-caption"><span id="stepCaption"></span><small id="stepHint" title="Клавиши ← → или пробел"></small></div><button id="next" class="button primary"></button></div>
+      <footer>Учебная модель <span>Прибыль указана в рублях. Вероятности оценены по 100 наблюдениям.</span></footer>
+    </main>
+  </div>
+  <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
